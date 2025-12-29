@@ -1416,7 +1416,7 @@ var Events = {
 
 	startEvent: function(event, options) {
 		if(!event) {
-			Notifications.notify(null, _('Error: event data is missing.'));
+			Notifications.notify(true, _('Error: event data is missing.'));
 			return;
 		}
 		event.audio && AudioEngine.playEventMusic(event.audio);
