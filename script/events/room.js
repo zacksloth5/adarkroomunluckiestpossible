@@ -441,7 +441,7 @@ Events.Room = [
 					}, 'Room[5].scenes.fur100.action', delay);
 				},
 				onLoad: function() {
-					if(Math.random() < 0.5) {
+					if(Math.random() < 0) { // Not possible anymore
 						this.action(60);
 					}
 				},
@@ -464,7 +464,7 @@ Events.Room = [
 					}, 'Room[5].scenes.fur500.action', delay);
 				},
 				onLoad: function() {
-					if(Math.random() < 0.3) {
+					if(Math.random() < 0) { //Not possible anymore
 						this.action(60);
 					}
 				},
