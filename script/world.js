@@ -555,12 +555,9 @@ var World = {
   checkFight: function() {
     World.fightMove = typeof World.fightMove == 'number' ? World.fightMove : 0;
     World.fightMove++;
-    if(World.fightMove > World.FIGHT_DELAY) {
-      var chance = World.FIGHT_CHANCE;
-      chance *= $SM.hasPerk('stealthy') ? 0.5 : 1;
-      if(Math.random() < chance) {
-        World.fightMove = 0;
-        Events.triggerFight();
+    if(World.fightMove > World.FIGHT_DELAY) {{
+      World.fightMove = 0;
+      Events.triggerFight();
       }
     }
   },
