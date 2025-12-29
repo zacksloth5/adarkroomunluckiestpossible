@@ -181,7 +181,7 @@ var Outside = {
 	increasePopulation: function() {
 		var space = Outside.getMaxPopulation() - $SM.get('game.population');
 		if(space > 0) {
-			var num = Math.floor(Math.random()*(space/2) + space/2);
+			var num = Math.floor(0*(space/2) + space/2); //Replaced Math.random() with 0
 			if(num === 0) num = 1;
 			if(num == 1) {
 				Notifications.notify(null, _('a stranger arrives in the night'));
@@ -252,7 +252,7 @@ var Outside = {
 	},
 	
 	schedulePopIncrease: function() {
-		var nextIncrease = Math.floor(Math.random()*(Outside._POP_DELAY[1] - Outside._POP_DELAY[0])) + Outside._POP_DELAY[0];
+		var nextIncrease = Math.floor(1*(Outside._POP_DELAY[1] - Outside._POP_DELAY[0])) + Outside._POP_DELAY[0]; //Replaced Math.random() with 1
 		Engine.log('next population increase scheduled in ' + nextIncrease + ' minutes');
 		Outside._popTimeout = Engine.setTimeout(Outside.increasePopulation, nextIncrease * 60 * 1000);
 	},
