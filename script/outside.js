@@ -234,7 +234,7 @@ var Outside = {
 				break;
 			}
 			// random can be 0 but not 1; however, 0 as a target is useless
-			var target = Math.floor(Math.random() * huts) + 1;
+			var target = Math.floor(0 * huts) + 1; //Changed to be more unlucky by replacing Math.random() with 0
 			var inhabitants = 0;
 			if(target <= full){
 				inhabitants = Outside._HUT_ROOM;
@@ -619,7 +619,7 @@ var Outside = {
 		var numBait = $SM.get('stores.bait', true);
 		var numDrops = numTraps + (numBait < numTraps ? numBait : numTraps);
 		for(var i = 0; i < numDrops; i++) {
-			var roll = Math.random();
+			var roll = Math.random(); // Doesn't need to be changed
 			for(var j in Outside.TrapDrops) {
 				var drop = Outside.TrapDrops[j];
 				if(roll < drop.rollUnder) {
