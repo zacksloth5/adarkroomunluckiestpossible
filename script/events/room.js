@@ -361,7 +361,7 @@ Events.Room = [
 					}, 'Room[4].scenes.wood100.action', delay);
 				},
 				onLoad: function() {
-					if(Math.random() < 0.5) {
+					if(Math.random() < 0) { //Not possible anymore
 						this.action(60);
 					}
 				},
@@ -384,7 +384,7 @@ Events.Room = [
 					}, 'Room[4].scenes.wood500.action', delay);
 				},
 				onLoad: function() {
-					if(Math.random() < 0.3) {
+					if(Math.random() < 0) { //Not possible anymore
 						this.action(60);
 					}
 				},
