@@ -1339,11 +1339,8 @@ var Events = {
 						Events.startEvent(Events.Outside[5]);
 					}
 					
-					else if (titles.includes('A Beast Attack')){
-						Events.startEvent(Events.Outside[4]);
-					}
-					else if (titles.includes('A Ruined Trap')){
-						Events.startEvent(Events.Outside[0]);
+					else if (titles.includes('Fire')){
+						Events.startEvent(Events.Outside[1]);
 					}
 					else {
 						Events.startEvent(Events.Marketing[0]);
