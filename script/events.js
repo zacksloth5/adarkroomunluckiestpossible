@@ -1328,11 +1328,41 @@ var Events = {
 				return;
 			} else {
 				var r = Math.floor(Math.random()*(possibleEvents.length));
-				Events.startEvent(possibleEvents[r]);
+				var titles = []
+				for (var j=0; j<possibleEvents.length; j++){
+					titles.push(possibleEvents[j].title);}
+				if (Engine.activeModule == Outside){
+					if (titles.includes('Plague') && $SM.get('stores["medicine"]', true) < 5){
+						Events.startEvent(Events.EventPool['Plague']);
+					}
+					else if (titles.includes('A Military Raid')){
+						Events.startEvent(Events.EventPool['A Military Raid']);
+					}
+					
+					else if (titles.includes('A Beast Attack')){
+						Events.startEvent(Events.EventPool['A Beast Attack']);
+					}
+					else if (titles.includes('A Ruined Trap')){
+						Events.startEvent(Events.EventPool['A Ruined Trap']);
+					}
+					else {
+						Events.startEvent(Events.EventPool['Penrose']);
+					}}
+				else {
+					if (titles.includes('A Sick Man')){
+						Events.startEvent(Events.EventPool['A Sick Man']);
+					}
+					else if (titles.includes('The Mysterious Wanderer')){
+						Events.startEvent(Events.EventPool['The Mysterious Wanderer']);
+					}
+					else {
+						Events.startEvent(Events.EventPool['Penrose']);
+					}
+				}
 			}
-		}
-
 		Events.scheduleNextEvent();
+		}
+		
 	},
 
 	triggerFight: function() {

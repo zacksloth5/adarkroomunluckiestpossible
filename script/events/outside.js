@@ -138,7 +138,7 @@ Events.Outside = [
 				],
 				notification: _('sufferers are left to die'),
 				onLoad: function() {
-					var numKilled = Math.floor(Math.random() * Math.floor($SM.get('game.population', true)/2)) + 1;
+					var numKilled = Math.floor(1 * Math.floor($SM.get('game.population', true)/2));
 					Outside.killVillagers(numKilled);
 				},
 				buttons: {
@@ -192,7 +192,7 @@ Events.Outside = [
 				],
 				notification: _('epidemic is eradicated eventually'),
 				onLoad: function() {
-					var numKilled = Math.floor(Math.random() * 5) + 2;
+					var numKilled = Math.floor(1 * 5) + 1;
 					Outside.killVillagers(numKilled);
 				},
 				buttons: {
@@ -210,7 +210,7 @@ Events.Outside = [
 				],
 				notification: _('population is almost exterminated'),
 				onLoad: function() {
-					var numKilled = Math.floor(Math.random() * 80) + 10;
+					var numKilled = Math.floor(1 * 80) + 9;
 					Outside.killVillagers(numKilled);
 				},
 				buttons: {
@@ -238,7 +238,7 @@ Events.Outside = [
 				],
 				notification: _('wild beasts attack the villagers'),
 				onLoad: function() {
-					var numKilled = Math.floor(Math.random() * 10) + 1;
+					var numKilled = Math.floor(1 * 10);
 					Outside.killVillagers(numKilled);
 				},
 				reward: {
@@ -273,7 +273,7 @@ Events.Outside = [
 				],
 				notification: _('troops storm the village'),
 				onLoad: function() {
-					var numKilled = Math.floor(Math.random() * 40) + 1;
+					var numKilled = Math.floor(1 * 40);
 					Outside.killVillagers(numKilled);
 				},
 				reward: {

@@ -614,7 +614,7 @@ Events.Room = [
 						text: _('give 1 medicine'),
 						cost: { 'medicine': 1 },
 						notification: _('the man swallows the medicine eagerly'),
-						nextScene: { 0.1: 'alloy', 0.3: 'cells', 0.5: 'scales', 1.0: 'nothing' }
+						nextScene: { 0: 'alloy', 0: 'cells', 0: 'scales', 1.0: 'nothing' }
 					},
 					'ignore': {
 						text: _('tell him to leave'),
