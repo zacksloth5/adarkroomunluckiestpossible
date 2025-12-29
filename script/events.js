@@ -1333,30 +1333,30 @@ var Events = {
 					titles.push(possibleEvents[j].title);}
 				if (Engine.activeModule == Outside){
 					if (titles.includes('Plague') && $SM.get('stores["medicine"]', true) < 5){
-						Events.startEvent(Events.EventPool['Plague']);
+						Events.startEvent(Events.Outside[3]);
 					}
 					else if (titles.includes('A Military Raid')){
-						Events.startEvent(Events.EventPool['A Military Raid']);
+						Events.startEvent(Events.Outside[5]);
 					}
 					
 					else if (titles.includes('A Beast Attack')){
-						Events.startEvent(Events.EventPool['A Beast Attack']);
+						Events.startEvent(Events.Outside[4]);
 					}
 					else if (titles.includes('A Ruined Trap')){
-						Events.startEvent(Events.EventPool['A Ruined Trap']);
+						Events.startEvent(Events.Outside[0]);
 					}
 					else {
-						Events.startEvent(Events.EventPool['Penrose']);
+						Events.startEvent(Events.Marketing[0]);
 					}}
 				else {
 					if (titles.includes('A Sick Man')){
-						Events.startEvent(Events.EventPool['A Sick Man']);
+						Events.startEvent(Events.Room[9]);
 					}
 					else if (titles.includes('The Mysterious Wanderer')){
-						Events.startEvent(Events.EventPool['The Mysterious Wanderer']);
+						Events.startEvent(Events.Room[5]);
 					}
 					else {
-						Events.startEvent(Events.EventPool['Penrose']);
+						Events.startEvent(Events.Marketing[0]);
 					}
 				}
 			}
